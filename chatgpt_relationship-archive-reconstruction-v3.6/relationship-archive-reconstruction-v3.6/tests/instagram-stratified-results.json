@@ -1,0 +1,153 @@
+{
+  "sample_strategy": "all attachment-bearing messages and call records; expanded stratified reactions/shares/empty content/notices/Unicode/mojibake; 120-point uniform and 100-record seeded random coverage per chunk; file boundaries",
+  "sample_size": 1022,
+  "source_message_count": 11000,
+  "per_file": {
+    "message_1.json": {
+      "source_records": 10000,
+      "selected_records": 737,
+      "feature_counts": {
+        "attachment": 121,
+        "call_duration": 13,
+        "reaction": 296,
+        "share": 515,
+        "empty_or_null_content": 198,
+        "synthetic_notice": 782,
+        "mojibake_suspect": 995,
+        "non_latin1_unicode": 0,
+        "multi_attachment": 3,
+        "share_and_reaction": 230
+      }
+    },
+    "message_2.json": {
+      "source_records": 1000,
+      "selected_records": 285,
+      "feature_counts": {
+        "attachment": 4,
+        "call_duration": 0,
+        "reaction": 6,
+        "share": 6,
+        "empty_or_null_content": 6,
+        "synthetic_notice": 8,
+        "mojibake_suspect": 117,
+        "non_latin1_unicode": 0,
+        "multi_attachment": 0,
+        "share_and_reaction": 3
+      }
+    }
+  },
+  "feature_records_in_source": {
+    "non_dict_source_records": 0,
+    "attachment_records_in_source": 125,
+    "call_duration_records_in_source": 13,
+    "reaction_records_in_source": 302,
+    "share_records_in_source": 521,
+    "empty_or_null_content_records_in_source": 204,
+    "synthetic_notice_records_in_source": 790,
+    "mojibake_suspect_records_in_source": 1112,
+    "non_latin1_unicode_records_in_source": 0,
+    "multi_attachment_records_in_source": 3,
+    "share_and_reaction_records_in_source": 233
+  },
+  "event_kind_counts": {
+    "text": 529,
+    "reaction": 34,
+    "share": 297,
+    "unknown": 16,
+    "photo": 102,
+    "call": 13,
+    "audio": 16,
+    "video": 7,
+    "system": 8
+  },
+  "attachment_source_key_counts": {
+    "photos": 106,
+    "audio_files": 16,
+    "videos": 7
+  },
+  "attachment_reference_occurrences_in_sample": 129,
+  "messages_with_attachments_in_sample": 125,
+  "attachment_link_summary": {
+    "attachment_reference_count": 129,
+    "reference_occurrences_linked": 126,
+    "distinct_assets_linked": 126,
+    "missing_reference_occurrences": 3,
+    "unsafe_references": 0,
+    "unlinked_asset_count": 0
+  },
+  "attachment_status_counts": {
+    "present-not-inspected": 122,
+    "referenced-but-missing": 3
+  },
+  "asset_count_in_export": 126,
+  "asset_categories": {
+    "audio": 15,
+    "audio-container-mp4": 1,
+    "photo": 106,
+    "video": 4
+  },
+  "all_asset_hashes_present": true,
+  "sampled_asset_link_occurrences": 126,
+  "role_container_mismatch_count": 1,
+  "optional_ffprobe_available": true,
+  "container_stream_probe": [
+    {
+      "render_role": "audio",
+      "container_mime_type": "video/mp4",
+      "stream_types": {
+        "audio": 1
+      },
+      "codecs": [
+        "aac"
+      ],
+      "duration_seconds": 7.57
+    }
+  ],
+  "role_container_mismatch_categories": {
+    "audio|video/mp4": 1
+  },
+  "mojibake": {
+    "candidate_strings_in_sample": 594,
+    "strings_repaired": 594,
+    "suspicious_unrepaired": 0,
+    "display_transform_checks": 166,
+    "display_transform_failures": 0
+  },
+  "raw_record_verification": {
+    "events_checked": 1022,
+    "event_ids_unique": true,
+    "source_record_fields_exact": true,
+    "attachment_refs_exact": true,
+    "reactions_share_calls_metadata_exact": true,
+    "timestamp_conversion_exact_for_test_timezone": true,
+    "failure_count": 0,
+    "failure_categories": {},
+    "pass": true
+  },
+  "event_ids_unique": true,
+  "chronological_sort_pass": true,
+  "timestamps_missing_in_sample": 0,
+  "sparse_placeholder_slots_skipped_by_design": 9978,
+  "non_dict_records_in_original_source": 0,
+  "synthetic_notices_in_sample": 331,
+  "null_or_empty_content_in_sample": 147,
+  "chunk_chronology": [
+    {
+      "records": 10000,
+      "newest_first": true,
+      "oldest_first": false,
+      "first_timestamp_ms": 1794287658412,
+      "last_timestamp_ms": 1787255848521
+    },
+    {
+      "records": 1000,
+      "newest_first": true,
+      "oldest_first": false,
+      "first_timestamp_ms": 1787255833771,
+      "last_timestamp_ms": 1778005951250
+    }
+  ],
+  "timezone_used_for_test_only": "Asia/Kolkata",
+  "timezone_confirmation_still_required": true,
+  "pass": true
+}

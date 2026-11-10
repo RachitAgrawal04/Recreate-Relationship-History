@@ -1,0 +1,41 @@
+{
+  "project_schema_version": "1.0.0",
+  "skill_version": "3.6.0",
+  "project_id": "relationship-archive-project",
+  "status": "in_progress",
+  "current_phase": "setup",
+  "last_verified_checkpoint_id": null,
+  "last_verified_operation_id": null,
+  "next_action": "Inventory the uploaded sources and initialize the project manifest.",
+  "work_units": [],
+  "source_coverage": [],
+  "media": {
+    "manifest_path": null,
+    "manifest_sha256": null,
+    "assets_inventoried": 0,
+    "assets_available": 0,
+    "assets_linked": 0,
+    "assets_unlinked": 0,
+    "assets_missing": 0,
+    "required_assets_for_next_action": []
+  },
+  "unresolved_decisions": [],
+  "blockers": [],
+  "assumptions": [],
+  "tool_environment": {
+    "file_access": "unknown",
+    "code_execution": "unknown",
+    "archive_extraction": "unknown",
+    "app_build_runtime": "unknown",
+    "deployment_access": "unknown",
+    "limitations": []
+  },
+  "handoff": {
+    "level": "A-status-only",
+    "media_bytes_included": false,
+    "source_exports_included": false,
+    "required_reuploads": []
+  },
+  "tests": {"passed": [], "failed": [], "not_tested": []},
+  "integrity": {"manifest_verified": false, "checkpoint_verified": false, "last_verification_notes": []}
+}

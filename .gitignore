@@ -1,0 +1,32 @@
+# Personal chat exports and raw media (Never commit sensitive chats or media)
+Messages Exports/
+*Chat Export*
+Instagram Chat Export*/
+WhatsApp Chat Export*/
+
+# Raw audio/video media (if stored outside export folders)
+*.mp4
+*.ogg
+*.opus
+*.m4a
+*.wav
+*.mp3
+
+# Environment and secrets
+.env
+.env.*
+*.pem
+*.key
+*.secret
+
+# Web development & dependencies
+node_modules/
+dist/
+build/
+.cache/
+
+# Operating System & IDE
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

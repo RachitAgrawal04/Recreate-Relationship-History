@@ -1,0 +1,28 @@
+{
+  "handoff_manifest_version": "1.0.0",
+  "project_id": "relationship-archive-project",
+  "created_at_utc": null,
+  "handoff_level": "A-status-only",
+  "receiving_service_account": "must be confirmed by user",
+  "included_items": [],
+  "excluded_items": [
+    {"category": "credentials and authentication secrets", "reason": "never transferred"},
+    {"category": "raw exports, message text and media bytes", "reason": "excluded at Level A"}
+  ],
+  "media_transfer": {
+    "included": false,
+    "selection": "none",
+    "manifest_included": false,
+    "asset_ids_included": [],
+    "hashes_verified_after_transfer": false
+  },
+  "private_conversation_content": {
+    "normalized_text_included": false,
+    "original_exports_included": false,
+    "media_bytes_included": false,
+    "user_approval_record_id": null
+  },
+  "user_approved_sensitive_data_transfer": false,
+  "zip_integrity_verified": false,
+  "notes": []
+}

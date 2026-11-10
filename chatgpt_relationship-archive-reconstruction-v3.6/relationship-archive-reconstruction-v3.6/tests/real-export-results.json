@@ -1,0 +1,179 @@
+{
+  "report_version": "1.0",
+  "scope": "Structural parser and media-linking audit of supplied exports; no relationship interpretation.",
+  "privacy": "No message text, sender names, media filenames, message IDs or media contents included.",
+  "whatsapp": {
+    "zip_safety": {
+      "safe": true,
+      "entries": 729,
+      "issue_count": 0
+    },
+    "transcript_bytes": 1807805,
+    "transcript_sha256": "948cdffcba35701fc1d3cb38b721aa590720e240795fac3926ed3d7a1637edcd",
+    "events": 27558,
+    "physical_lines": 30024,
+    "timestamp_headers": 27558,
+    "line_coverage": true,
+    "exact_fidelity": {
+      "events_checked": 27558,
+      "physical_lines": 30024,
+      "all_lines_owned_exactly_once": true,
+      "event_sender_timestamp_body_date_exact": true,
+      "failure_count": 0,
+      "failure_categories": {},
+      "pass": true
+    },
+    "date_order": "dmy",
+    "timezone": "not established by export",
+    "date_range": [
+      "2026-08-28T15:21:00",
+      "2026-11-10T15:46:00"
+    ],
+    "sender_counts_sorted": [
+      13375,
+      14174
+    ],
+    "parse_status_counts": {
+      "exact": 27558
+    },
+    "event_kind_counts_after_linking": {
+      "system": 9,
+      "text": 26410,
+      "sticker": 263,
+      "unknown": 97,
+      "deletion": 116,
+      "photo": 436,
+      "audio": 129,
+      "video": 89,
+      "contact": 6,
+      "document": 1,
+      "call": 2
+    },
+    "system_events": 9,
+    "edited_events": 613,
+    "timestamp_inversion_count": 7,
+    "attachment_reference_occurrences": 984,
+    "distinct_attachment_names": 785,
+    "generic_media_markers_unmatched": 37,
+    "attachment_status_counts": {
+      "present-not-inspected": 924,
+      "unmatched-generic-reference": 37,
+      "referenced-but-missing": 60
+    },
+    "asset_count": 728,
+    "asset_categories": {
+      "audio": 14,
+      "contact-card": 6,
+      "document": 1,
+      "photo": 410,
+      "probable-voice-note": 115,
+      "sticker": 97,
+      "video": 85
+    },
+    "asset_link_summary": {
+      "attachment_reference_occurrences": 984,
+      "distinct_missing_names": 57,
+      "events_with_asset_links": 924,
+      "asset_link_occurrences": 924,
+      "distinct_assets_linked": 728,
+      "missing_reference_occurrences": 60,
+      "ambiguous_events": 0,
+      "unlinked_asset_count": 0
+    },
+    "all_asset_hashes_present": true
+  },
+  "instagram": {
+    "zip_safety": {
+      "safe": true,
+      "entries": 136,
+      "issue_count": 0
+    },
+    "message_json_files": 2,
+    "messages": 11000,
+    "date_range_local_under_test_timezone": [
+      "2026-05-06T00:02:31.250+05:30",
+      "2026-11-10T10:44:18.412+05:30"
+    ],
+    "timezone_used_for_test_only": "Asia/Kolkata",
+    "timezone_confirmation_still_required": true,
+    "chunk_chronology": [
+      {
+        "records": 10000,
+        "newest_first": true,
+        "oldest_first": false,
+        "first_timestamp_ms": 1794287658412,
+        "last_timestamp_ms": 1787255848521
+      },
+      {
+        "records": 1000,
+        "newest_first": true,
+        "oldest_first": false,
+        "first_timestamp_ms": 1787255833771,
+        "last_timestamp_ms": 1778005951250
+      }
+    ],
+    "event_kind_counts": {
+      "text": 9979,
+      "reaction": 250,
+      "share": 521,
+      "unknown": 65,
+      "photo": 102,
+      "system": 47,
+      "call": 13,
+      "audio": 16,
+      "video": 7
+    },
+    "synthetic_notice_count": 790,
+    "null_or_empty_content_records": 204,
+    "mojibake_candidate_strings": 1726,
+    "strings_repaired": 1726,
+    "attachment_reference_count": 129,
+    "messages_with_attachments": 125,
+    "asset_count": 126,
+    "asset_categories_by_signature": {
+      "audio": 15,
+      "audio-container-mp4": 1,
+      "photo": 106,
+      "video": 4
+    },
+    "audio_role_mp4_container_count": 1,
+    "asset_link_summary": {
+      "attachment_reference_count": 129,
+      "reference_occurrences_linked": 126,
+      "distinct_assets_linked": 126,
+      "missing_reference_occurrences": 3,
+      "unsafe_references": 0,
+      "unlinked_asset_count": 0
+    },
+    "missing_references_by_message_type": {
+      "video": 3
+    },
+    "raw_record_verification": {
+      "events_checked": 11000,
+      "event_ids_unique": true,
+      "source_record_fields_exact": true,
+      "attachment_refs_exact": true,
+      "reactions_share_calls_metadata_exact": true,
+      "timestamp_conversion_exact_for_test_timezone": true,
+      "failure_count": 0,
+      "failure_categories": {},
+      "pass": true
+    },
+    "all_asset_hashes_present": true
+  },
+  "cross_platform_diagnostic": {
+    "assumed_timezone_for_test_only": "Asia/Kolkata",
+    "merged_event_count": 38558,
+    "source_order_constraints_preserved": true,
+    "expected_event_count": 38558,
+    "no_events_dropped": true,
+    "minute_clusters_with_both_platforms": 75,
+    "events_in_cross_platform_minute_clusters": 272
+  },
+  "limits": [
+    "WhatsApp timezone is not encoded in its text export and must be confirmed for the final merge.",
+    "Media bytes were inventoried, signature-checked and hashed, but personal image/audio/video contents were not viewed or listened to.",
+    "The three missing Instagram video references remain unresolved; the skill must not invent replacement media.",
+    "The WhatsApp export contains unmatched generic media markers and 57 distinct referenced filenames absent from the ZIP."
+  ]
+}
