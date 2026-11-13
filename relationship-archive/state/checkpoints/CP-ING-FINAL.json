@@ -1,0 +1,12 @@
+{
+  "checkpoint_id": "CP-ING-FINAL",
+  "created_at_utc": "2026-11-13T13:01:06+00:00",
+  "skill_version": "3.6.0",
+  "schema_version": "1.0.0",
+  "parser_version": "chat_tools.py:3.6.0 / media_tools.py:3.6.0",
+  "current_phase": "ingestion/complete",
+  "timezone_label": "assumed",
+  "timezone_confirmed": false,
+  "next_action": "Show ingestion report to user and wait for approval before analysis.",
+  "notes": "WA: 27,558 events | IG: 11,000 events | Merged: 38,558 | Validation: PASS | Timezone: assumed"
+}

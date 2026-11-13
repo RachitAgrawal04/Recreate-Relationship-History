@@ -4,20 +4,20 @@
 - **Skill version:** 3.6.0
 - **Data schema version:** 1.0.0 (not yet applied — normalization not started)
 - **Parser version:** chat_tools.py v3.6.0 · media_tools.py v3.6.0
-- **Last updated:** 2026-11-10 (Asia/Kolkata, assumed — not yet user-confirmed)
-- **Current phase:** `setup` — workspace initialization complete; waiting for user decisions before Pass 1
-- **Last verified checkpoint ID:** CP-000001
-- **Latest checkpoint path:** `state/checkpoints/CP-000001.json`
+- **Last updated:** 2026-11-13 (Asia/Kolkata)
+- **Current phase:** `ingestion/complete` — full 13-stage pipeline run, ALL PASS, waiting for user approval
+- **Last verified checkpoint ID:** CP-ING-FINAL
+- **Latest checkpoint path:** `state/checkpoints/CP-ING-FINAL.json`
 
 ---
 
 ## Current position
 
-**Last fully verified operation:** Workspace initialization — project-manifest.json, state files, checkpoint CP-000001, and all documentation files created and hashed.
+**Last fully verified operation:** Full 13-stage ingestion pipeline complete (2026-11-13). Checkpoint CP-ING-FINAL. ALL PASS.
 
-**Exact next action:** Ask user the Pass 1 setup questions (SKILL.md §2.3) — timezone, identity confirmation, audience, milestones, off-chat context, mood/design preferences, and whether a text-only WhatsApp export exists separately.
+**Exact next action:** User reviews ingestion audit report and approves (or raises issues). After approval: resolve DEC-001 through DEC-009, then proceed to reading pass and analysis.
 
-**In-progress operation:** None. No normalization, parsing output or media copying has been started. No application code exists.
+**In-progress operation:** None. Ingestion complete. Waiting for user approval.
 
 ---
 
@@ -27,16 +27,19 @@
 |------|--------|
 | **WhatsApp export present** | ✅ `WhatsApp Chat with Radhika Singhal.txt` (1,807,805 bytes) + 781 media files |
 | **Instagram export present** | ✅ `message_1.json` (10,000 records) + `message_2.json` (1,000 records) + 129 files |
-| **WA parsed events** | 27,558 — validated in prior audit (real-export-results.json). Not yet output to normalized JSONL. |
-| **IG parsed events** | 11,000 — validated in prior audit (real-export-results.json). Not yet output to normalized JSONL. |
-| **Combined events** | 38,558 (prior audit, test-only timezone; not finalized) |
-| **WA date range** | 28 Aug 2026 15:21 → 10 Nov 2026 15:46 (local, timezone unconfirmed) |
-| **IG date range** | 06 May 2026 00:02 → 10 Nov 2026 10:44 (Asia/Kolkata test-only; unconfirmed) |
-| **Media assets inventoried** | 910 total (781 WA + 129 IG) — inventoried in prior audit only; no normalized manifest yet |
-| **Media assets linked** | 854 (prior audit): WA 728/728, IG 126/129 |
-| **Media assets missing** | 60 WA (57 distinct names + 3 IG video references) |
-| **Normalized event JSONL** | ❌ Not produced |
-| **Media manifest (project)** | ❌ Not produced |
+| **WA parsed events** | 27,558 — normalized to JSONL ✅ |
+| **IG parsed events** | 11,000 — normalized to JSONL ✅ |
+| **Combined events** | 38,558 — merged JSONL produced ✅ |
+| **WA date range** | 28 Aug 2026 15:21 → 10 Nov 2026 15:46 (local, timezone assumed) |
+| **IG date range** | 05 May 2026 18:32 UTC → 10 Nov 2026 05:14 UTC |
+| **Media assets inventoried** | 910 total (781 WA + 129 IG) — hashed and manifested ✅ |
+| **Media assets linked** | 910/910 — WA 781/781, IG 129/129 ✅ |
+| **Media assets missing** | 4 WA referenced-but-missing; 37 WA `<Media omitted>` (type unknown) |
+| **Normalized event JSONL** | ✅ 10 monthly chunk files produced |
+| **Media manifest (project)** | ✅ `data/manifests/media-manifest.json` (530 KB) |
+| **Search index** | ✅ `data/indexes/search-index.jsonl` (37,399 entries) |
+| **Ingestion report** | ✅ `reports/ingestion-report.json` |
+| **Missing media report** | ✅ `reports/missing-media-report.json` |
 | **Reading notes** | ❌ Not started |
 | **Analysis artifacts** | ❌ Not started |
 | **App features** | ❌ Not started |

@@ -17,6 +17,191 @@
     ],
     "result": "complete",
     "notes": "No parsing, normalization or app code involved. Documentation-only change."
+  },
+  {
+    "operation_id": "OP-ING-001",
+    "timestamp_utc": "2026-11-13T12:57:55+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Skill self-tests",
+    "files_written": [],
+    "result": "complete",
+    "notes": "23/23 chat_tools, 9/9 media_tools, parity pass"
+  },
+  {
+    "operation_id": "OP-ING-002",
+    "timestamp_utc": "2026-11-13T12:58:00+00:00",
+    "performed_by": "ingest.py",
+    "operation": "WhatsApp parse",
+    "files_written": [],
+    "result": "complete",
+    "notes": "27558 events, line_coverage=True"
+  },
+  {
+    "operation_id": "OP-ING-003",
+    "timestamp_utc": "2026-11-13T12:58:18+00:00",
+    "performed_by": "ingest.py",
+    "operation": "WhatsApp media inventory",
+    "files_written": [],
+    "result": "complete",
+    "notes": "781 assets"
+  },
+  {
+    "operation_id": "OP-ING-004",
+    "timestamp_utc": "2026-11-13T12:58:19+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Instagram parse",
+    "files_written": [],
+    "result": "complete",
+    "notes": "11000 events"
+  },
+  {
+    "operation_id": "OP-ING-005",
+    "timestamp_utc": "2026-11-13T12:58:21+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Instagram media inventory",
+    "files_written": [],
+    "result": "complete",
+    "notes": "129 assets"
+  },
+  {
+    "operation_id": "OP-ING-006",
+    "timestamp_utc": "2026-11-13T12:58:22+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Media linking",
+    "files_written": [],
+    "result": "complete",
+    "notes": "WA linked 781, IG linked 0"
+  },
+  {
+    "operation_id": "OP-ING-007",
+    "timestamp_utc": "2026-11-13T12:58:22+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Cross-platform merge",
+    "files_written": [],
+    "result": "complete",
+    "notes": "38558 merged events"
+  },
+  {
+    "operation_id": "OP-ING-001",
+    "timestamp_utc": "2026-11-13T13:00:47+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Skill self-tests",
+    "files_written": [],
+    "result": "complete",
+    "notes": "23/23 chat_tools, 9/9 media_tools, parity pass"
+  },
+  {
+    "operation_id": "OP-ING-002",
+    "timestamp_utc": "2026-11-13T13:00:51+00:00",
+    "performed_by": "ingest.py",
+    "operation": "WhatsApp parse",
+    "files_written": [],
+    "result": "complete",
+    "notes": "27558 events, line_coverage=True"
+  },
+  {
+    "operation_id": "OP-ING-003",
+    "timestamp_utc": "2026-11-13T13:00:57+00:00",
+    "performed_by": "ingest.py",
+    "operation": "WhatsApp media inventory",
+    "files_written": [],
+    "result": "complete",
+    "notes": "781 assets"
+  },
+  {
+    "operation_id": "OP-ING-004",
+    "timestamp_utc": "2026-11-13T13:00:58+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Instagram parse",
+    "files_written": [],
+    "result": "complete",
+    "notes": "11000 events"
+  },
+  {
+    "operation_id": "OP-ING-005",
+    "timestamp_utc": "2026-11-13T13:00:59+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Instagram media inventory",
+    "files_written": [],
+    "result": "complete",
+    "notes": "129 assets"
+  },
+  {
+    "operation_id": "OP-ING-006",
+    "timestamp_utc": "2026-11-13T13:00:59+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Media linking",
+    "files_written": [],
+    "result": "complete",
+    "notes": "WA linked 781, IG linked 129"
+  },
+  {
+    "operation_id": "OP-ING-007",
+    "timestamp_utc": "2026-11-13T13:01:00+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Cross-platform merge",
+    "files_written": [],
+    "result": "complete",
+    "notes": "38558 merged events"
+  },
+  {
+    "operation_id": "OP-ING-008",
+    "timestamp_utc": "2026-11-13T13:01:04+00:00",
+    "performed_by": "ingest.py",
+    "operation": "JSONL chunk write",
+    "files_written": [
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\wa-2026-08.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\wa-2026-09.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\wa-2026-10.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\wa-2026-11.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\ig-2026-05.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\ig-2026-07.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\ig-2026-08.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\ig-2026-09.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\ig-2026-10.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\ig-2026-11.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\merged-2026-05.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\merged-2026-07.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\merged-2026-08.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\merged-2026-09.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\merged-2026-10.jsonl",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\normalized\\merged-2026-11.jsonl"
+    ],
+    "result": "complete",
+    "notes": "6 merged monthly chunks"
+  },
+  {
+    "operation_id": "OP-ING-009",
+    "timestamp_utc": "2026-11-13T13:01:04+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Media manifest",
+    "files_written": [
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\manifests\\media-manifest.json"
+    ],
+    "result": "complete",
+    "notes": ""
+  },
+  {
+    "operation_id": "OP-ING-010",
+    "timestamp_utc": "2026-11-13T13:01:06+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Search index",
+    "files_written": [
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\data\\indexes\\search-index.jsonl"
+    ],
+    "result": "complete",
+    "notes": ""
+  },
+  {
+    "operation_id": "OP-ING-FINAL",
+    "timestamp_utc": "2026-11-13T13:01:06+00:00",
+    "performed_by": "ingest.py",
+    "operation": "Ingestion pipeline complete",
+    "files_written": [
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\reports\\ingestion-report.json",
+      "D:\\Relationship Chat Reconstruction Webpage\\relationship-archive\\reports\\missing-media-report.json"
+    ],
+    "result": "complete",
+    "notes": ""
   }
 ]
-

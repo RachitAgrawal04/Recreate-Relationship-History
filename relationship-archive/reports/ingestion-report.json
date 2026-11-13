@@ -1,0 +1,185 @@
+{
+  "report_version": "1.0",
+  "created_at_utc": "2026-11-13T13:01:06+00:00",
+  "scope": "Full ingestion audit. No relationship interpretation.",
+  "privacy": "No message text, sender names (beyond participant labels), private URLs, media contents or message IDs included.",
+  "timezone": {
+    "value": "Asia/Kolkata",
+    "label": "assumed",
+    "confirmed": false,
+    "warning": "Timezone is ASSUMED, not yet user-confirmed (pending DEC-001/DEC-002). All timestamps and cross-platform sort keys are provisional."
+  },
+  "whatsapp": {
+    "source_file": "WhatsApp Chat with Radhika Singhal.txt",
+    "source_sha256": "948cdffcba35701fc1d3cb38b721aa590720e240795fac3926ed3d7a1637edcd",
+    "physical_lines": 30024,
+    "timestamp_headers": 27558,
+    "line_coverage": true,
+    "events": 27558,
+    "date_order": "dmy",
+    "date_range": [
+      "2026-08-28T15:21:00",
+      "2026-11-10T15:46:00"
+    ],
+    "precision": "minute (12h format, no seconds in this export)",
+    "sender_counts": {
+      "Radhika Singhal": 13375,
+      "Rachit Agrawal": 14174
+    },
+    "event_kinds": {
+      "system": 9,
+      "text": 26410,
+      "sticker": 263,
+      "unknown": 41,
+      "deletion": 116,
+      "photo": 454,
+      "video": 128,
+      "audio": 127,
+      "contact": 6,
+      "document": 2,
+      "call": 2
+    },
+    "attachment_status_counts": {
+      "present-not-inspected": 980,
+      "unmatched-generic-reference": 37,
+      "referenced-but-missing": 4
+    },
+    "attachment_reference_occurrences": 984,
+    "distinct_assets_linked": 781,
+    "missing_reference_occurrences": 4,
+    "ambiguous_events": 0,
+    "unlinked_assets": 0,
+    "edited_events": 613,
+    "timestamp_inversions": 7,
+    "gaps_over_7_days": [],
+    "review_line_count": 0,
+    "monthly_volume": {
+      "2026-08": 119,
+      "2026-09": 9200,
+      "2026-10": 12722,
+      "2026-11": 5517
+    },
+    "asset_count": 781,
+    "asset_categories": {
+      "contact-card": 6,
+      "audio": 12,
+      "document": 2,
+      "photo": 425,
+      "video": 124,
+      "probable-voice-note": 115,
+      "sticker": 97
+    }
+  },
+  "instagram": {
+    "source_files": [
+      "radhikasinghal_17919763620346043/message_1.json",
+      "radhikasinghal_17919763620346043/message_2.json"
+    ],
+    "source_records_by_file": {
+      "radhikasinghal_17919763620346043/message_1.json": 10000,
+      "radhikasinghal_17919763620346043/message_2.json": 1000
+    },
+    "events": 11000,
+    "participants_found": [
+      "Rachit agrawal",
+      "Radhika Singhal"
+    ],
+    "timezone_used": "Asia/Kolkata",
+    "timezone_label": "assumed",
+    "date_range": [
+      "2026-05-05T18:32:31.250+00:00",
+      "2026-11-10T05:14:18.412+00:00"
+    ],
+    "event_kinds": {
+      "text": 9979,
+      "reaction": 250,
+      "share": 521,
+      "unknown": 65,
+      "photo": 102,
+      "system": 47,
+      "call": 13,
+      "audio": 16,
+      "video": 7
+    },
+    "attachment_status_counts": {
+      "present-not-inspected": 125
+    },
+    "attachment_reference_count": 129,
+    "distinct_assets_linked": 129,
+    "missing_reference_occurrences": 0,
+    "unlinked_assets": 0,
+    "mojibake_strings_repaired": 1726,
+    "synthetic_notice_count": 790,
+    "null_or_empty_content_records": 204,
+    "monthly_volume": {
+      "2026-05": 250,
+      "2026-07": 432,
+      "2026-08": 6283,
+      "2026-09": 2475,
+      "2026-10": 1194,
+      "2026-11": 366
+    },
+    "asset_count": 129,
+    "asset_categories": {
+      "audio": 15,
+      "audio-container-mp4": 1,
+      "photo": 106,
+      "video": 7
+    }
+  },
+  "combined": {
+    "total_events": 38558,
+    "wa_events": 27558,
+    "ig_events": 11000,
+    "event_kinds": {
+      "text": 36389,
+      "reaction": 250,
+      "share": 521,
+      "unknown": 106,
+      "photo": 556,
+      "system": 56,
+      "call": 15,
+      "audio": 143,
+      "video": 135,
+      "sticker": 263,
+      "deletion": 116,
+      "contact": 6,
+      "document": 2
+    },
+    "duplicate_candidate_groups": 313,
+    "events_in_uncertain_ordering_clusters": 272,
+    "total_assets": 910
+  },
+  "validation": {
+    "wa_event_ids_unique": true,
+    "wa_line_coverage": true,
+    "wa_event_count_vs_headers": true,
+    "ig_event_ids_unique": true,
+    "ig_event_count_vs_source": true,
+    "merged_count_complete": true,
+    "merged_event_ids_unique": true,
+    "duplicate_candidate_groups": 313,
+    "wa_timestamp_inversions": 7,
+    "wa_spot_check_sample_size": 20,
+    "wa_spot_check_failures": 0,
+    "all_pass": true
+  },
+  "limits": [
+    "Timezone (Asia/Kolkata) is ASSUMED not user-confirmed. All timestamps are provisional.",
+    "WhatsApp timestamps are exporting-phone local wall-clock with no encoded timezone.",
+    "Media bytes were inventoried, hashed, and linked by filename. Contents were not viewed or interpreted.",
+    "57 distinct WhatsApp filenames referenced but absent from the export directory.",
+    "3 Instagram video references have no corresponding file in the export.",
+    "37 generic '<Media omitted>' markers have unknown type; no bytes available.",
+    "Cross-platform ordering within the same minute is marked ordering_uncertain."
+  ],
+  "decisions_still_required": [
+    "DEC-001: WhatsApp timezone confirmation (currently assumed Asia/Kolkata).",
+    "DEC-002: Instagram display timezone confirmation (currently assumed Asia/Kolkata).",
+    "DEC-003: Identity — who is the requester (Rachit or Radhika)?",
+    "DEC-004: Audience — only me / both together / surprise?",
+    "DEC-005: Does a text-only WhatsApp export exist separately?",
+    "DEC-006: Human-supplied milestones.",
+    "DEC-007: Off-chat context (calls, meetings, distance, exams, travel)."
+  ]
+}
