@@ -1,0 +1,22 @@
+[
+  {
+    "operation_id": "OP-001",
+    "timestamp_utc": "2026-11-13T12:38:42Z",
+    "performed_by": "antigravity",
+    "operation": "Record DEC-010 (skill read-only rule) in decisions.json, add enforcement section to AGENTS.md, update PROJECT-STATUS.md decisions table.",
+    "files_written": [
+      "logs/decisions.json",
+      "AGENTS.md",
+      "PROJECT-STATUS.md"
+    ],
+    "files_read": [
+      "logs/decisions.json",
+      "logs/operations.json",
+      "AGENTS.md",
+      "PROJECT-STATUS.md"
+    ],
+    "result": "complete",
+    "notes": "No parsing, normalization or app code involved. Documentation-only change."
+  }
+]
+

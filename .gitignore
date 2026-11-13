@@ -1,32 +1,197 @@
-# Personal chat exports and raw media (Never commit sensitive chats or media)
+# =============================================================================
+# RELATIONSHIP ARCHIVE — ROOT .gitignore
+# Git repo root: D:\Relationship Chat Reconstruction Webpage\
+#
+# PURPOSE: Prevent accidental tracking of private source exports, generated
+# datasets, credentials and build outputs. This file does NOT restrict what
+# Antigravity (or any other tool) can read on disk — that is enforced by
+# keeping originals outside the app bundle and by the AGENTS.md / SKILL.md
+# access rules, not by Git.
+#
+# BEFORE COMMITTING: run  git status --short  and confirm that no private file
+# appears as staged or tracked. If a private file was ever committed, it must
+# be removed from history with  git filter-repo  or BFG before the repo is
+# shared anywhere.
+# =============================================================================
+
+
+# =============================================================================
+# 1. PRIVATE SOURCE EXPORTS (at repo root — never track originals)
+# =============================================================================
+
+# Original WhatsApp and Instagram exports and all their media
 Messages Exports/
-*Chat Export*
-Instagram Chat Export*/
-WhatsApp Chat Export*/
 
-# Raw audio/video media (if stored outside export folders)
-*.mp4
-*.ogg
-*.opus
-*.m4a
-*.wav
-*.mp3
+# Legacy or alternative export drop locations (guard against accidental drops)
+exports/
+source-exports/
 
-# Environment and secrets
+
+# =============================================================================
+# 2. SKILL PACKAGE — read-only; track as reference only if explicitly intended
+# =============================================================================
+# The skill folder is read-only. Its Python __pycache__ is build noise.
+# If you DO want to track the skill package itself, remove the next block.
+chatgpt_relationship-archive-reconstruction-v3.6/tools/__pycache__/
+chatgpt_relationship-archive-reconstruction-v3.6/**/__pycache__/
+
+
+# =============================================================================
+# 3. GENERATED / PRIVATE DATA (inside relationship-archive/)
+# =============================================================================
+
+# Untouched export copies placed inside the app workspace
+relationship-archive/data/source/
+
+# Parsed and normalized event chunks (.jsonl) — contain full message text
+relationship-archive/data/normalized/
+
+# Original media bytes (copied from exports for the archive)
+relationship-archive/data/media/
+
+# Derived media: thumbnails, waveforms, transcripts (AI-generated derivatives)
+# Actual subfolder on disk is "deprived-media" (typo preserved from scaffold)
+relationship-archive/data/deprived-media/
+# Also guard the canonical name in case it is corrected later
+relationship-archive/data/derived-media/
+
+# Search indexes (pre-computed search keys — regenerable from normalized data)
+relationship-archive/data/indexes/
+
+# Media manifests with hashes and private path metadata
+relationship-archive/data/manifests/
+
+# Public-facing bundle outputs that contain archive data
+relationship-archive/public/archive-data/
+relationship-archive/public/private-media/
+relationship-archive/public/data/
+
+
+# =============================================================================
+# 4. LOCAL SECRETS AND ENVIRONMENT FILES
+# =============================================================================
+
 .env
-.env.*
+.env.local
+.env.development
+.env.production
+.env.staging
+.env.test
+# Allow a committed .env.example (no real values) if one is added later
+!.env.example
+
+# Any credentials, token, cookie or key files dropped locally
 *.pem
 *.key
-*.secret
+*.pfx
+*.p12
+credentials.json
+secrets.json
 
-# Web development & dependencies
-node_modules/
+
+# =============================================================================
+# 5. PYTHON CACHES AND VIRTUAL ENVIRONMENTS
+# =============================================================================
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
 dist/
-build/
-.cache/
+*.egg
 
-# Operating System & IDE
+
+# =============================================================================
+# 6. NODE / JAVASCRIPT BUILD OUTPUTS AND CACHES
+# =============================================================================
+
+node_modules/
+relationship-archive/node_modules/
+
+# Build outputs
+relationship-archive/dist/
+relationship-archive/build/
+relationship-archive/.next/
+relationship-archive/out/
+relationship-archive/.vite/
+relationship-archive/.cache/
+
+# Package manager lock files are intentionally NOT ignored — commit them
+# (package-lock.json, yarn.lock, pnpm-lock.yaml carry exact dep versions)
+
+
+# =============================================================================
+# 7. OS AND EDITOR NOISE
+# =============================================================================
+
+# Windows
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
 .DS_Store
-.vscode/
+.AppleDouble
+.LSOverride
+._*
+
+# VS Code workspace state (keep .vscode/settings.json if you want shared config)
+.vscode/.roaming
+*.code-workspace
+
+# JetBrains IDEs
 .idea/
+
+# Vim / Emacs swap files
+*.swp
+*.swo
+*~
+\#*\#
+
+
+# =============================================================================
+# 8. LOGS AND TEMPORARY FILES
+# =============================================================================
+
+# Antigravity task/session logs (Antigravity-internal; not project artifacts)
+.gemini/
+
+# Temporary parser outputs (atomic-write pattern writes .tmp before rename)
+*.tmp
+
+# General logs outside the project's structured log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# =============================================================================
+# 9. WHAT IS INTENTIONALLY TRACKED
+# =============================================================================
+# The following are explicitly NOT ignored and should be committed:
+#
+#   relationship-archive/AGENTS.md           — project working principles
+#   relationship-archive/PROJECT-STATUS.md   — human-readable project state
+#   relationship-archive/README.md           — project README
+#   relationship-archive/package.json        — dependency declarations
+#   relationship-archive/docs/               — architecture, schema, plans
+#   relationship-archive/logs/decisions.json — append-only decision log
+#   relationship-archive/logs/operations.json— append-only operation log
+#   relationship-archive/state/              — project-state.json + checkpoints
+#   relationship-archive/project-manifest.json
+#   relationship-archive/src/                — application source (future)
+#   relationship-archive/tests/              — test code (future)
+#   relationship-archive/scripts/            — ingestion scripts (future)
+#   chatgpt_relationship-archive-reconstruction-v3.6/  (skill package, read-only)
+#
+# NOTE: data/manifests/media-manifest.json contains only hashes and relative
+# paths — no message text or media bytes — so it MAY be committed if wanted.
+# Decide deliberately before committing it.
+

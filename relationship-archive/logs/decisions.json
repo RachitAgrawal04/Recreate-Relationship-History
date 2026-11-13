@@ -1,0 +1,18 @@
+[
+  {
+    "decision_id": "DEC-010",
+    "timestamp_utc": "2026-11-13T12:38:42Z",
+    "recorded_by": "user",
+    "decision": "The skill package (chatgpt_relationship-archive-reconstruction-v3.6/) is the engineering and data-integrity rulebook for this project. It is permanently read-only during application implementation. No file inside it may be created, modified, renamed or deleted as a side-effect of building the website.",
+    "rationale": "The skill and the app are separate concerns. The skill is the specification; the app is the implementation. Changes to the skill, if ever needed, must be a separate, explicitly reviewed task — not a by-product of app work.",
+    "enforcement": [
+      "Antigravity and all agents must treat chatgpt_relationship-archive-reconstruction-v3.6/ as read-only at all times.",
+      "If an app implementation decision appears to conflict with the skill, stop and report the conflict. Do not resolve it by editing the skill.",
+      "Any proposed skill change must be presented as a standalone reviewed task with an explicit diff before any file is touched.",
+      "This rule is recorded in AGENTS.md and PROJECT-STATUS.md so it survives session and model switches."
+    ],
+    "supersedes": null,
+    "status": "active"
+  }
+]
+
