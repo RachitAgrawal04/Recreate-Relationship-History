@@ -1,0 +1,219 @@
+@import "tailwindcss";
+
+/* ─── Font family custom properties ─────────────────────────────── */
+@theme inline {
+  --font-serif:      'Source Serif 4', Georgia, serif;
+  --font-sans:       'Inter', system-ui, sans-serif;
+  --font-devanagari: 'Noto Sans Devanagari', 'Inter', sans-serif;
+  --font-mono:       'JetBrains Mono', monospace;
+}
+
+/* ─── Design Tokens ────────────────────────────────────────────── */
+:root {
+  /* Base palette */
+  --color-bg-primary:    #FAF7F2;
+  --color-bg-secondary:  #F3EDE4;
+  --color-bg-tertiary:   #EBE3D7;
+  --color-bg-deep:       #2C2825;
+
+  --color-text-primary:   #1A1714;
+  --color-text-secondary: #6B6259;
+  --color-text-tertiary:  #9C9184;
+  --color-text-inverse:   #FAF7F2;
+
+  --color-border-subtle: #E4DCD0;
+  --color-border-medium: #D1C7B9;
+
+  /* Person A — Rachit (warm umber) */
+  --color-person-a-bg:     #E8DED2;
+  --color-person-a-accent: #8B7355;
+  --color-person-a-text:   #2C2419;
+
+  /* Person B — Radhika (sage green) */
+  --color-person-b-bg:     #DDE4DB;
+  --color-person-b-accent: #5E7A5A;
+  --color-person-b-text:   #1A2419;
+
+  /* Platform indicators */
+  --color-platform-wa: #6B8F71;
+  --color-platform-ig: #8B6B8F;
+
+  /* Semantic */
+  --color-accent-ai:         #7B8BA0;
+  --color-accent-ai-bg:      #EEF0F3;
+  --color-accent-human:      #A07B5A;
+  --color-accent-human-bg:   #F5EFE8;
+  --color-sensitive-blur:    #D4CFC8;
+  --color-sensitive-border:  #C4B8A8;
+  --color-focus-ring:        #7B8BA0;
+
+  /* Emotional weather — defaults (neutral) */
+  --weather-bg:     #FAF7F2;
+  --weather-accent: #8B7355;
+  --weather-border: #E4DCD0;
+  --weather-glow:   transparent;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Container */
+  --container-chat:    680px;
+  --container-content: 720px;
+  --container-wide:    960px;
+
+  /* Z-index */
+  --z-sticky:  10;
+  --z-nav:     20;
+  --z-overlay: 30;
+  --z-modal:   40;
+}
+
+/* ─── Emotional Weather States ─────────────────────────────────── */
+[data-mood="neutral"] {
+  --weather-bg:     #FAF7F2;
+  --weather-accent: #8B7355;
+  --weather-border: #E4DCD0;
+  --weather-glow:   transparent;
+}
+[data-mood="joyful"] {
+  --weather-bg:     #FBF6ED;
+  --weather-accent: #C4923D;
+  --weather-border: #E8DFC8;
+  --weather-glow:   rgba(196,146,61,0.04);
+}
+[data-mood="tender"] {
+  --weather-bg:     #F9F3F0;
+  --weather-accent: #A67B6B;
+  --weather-border: #E6D8D2;
+  --weather-glow:   rgba(166,123,107,0.04);
+}
+[data-mood="playful"] {
+  --weather-bg:     #F5F5EE;
+  --weather-accent: #7A8B5A;
+  --weather-border: #DCE0CC;
+  --weather-glow:   rgba(122,139,90,0.04);
+}
+[data-mood="tense"] {
+  --weather-bg:     #F5F2F0;
+  --weather-accent: #8C7B7B;
+  --weather-border: #DDD6D3;
+  --weather-glow:   rgba(140,123,123,0.04);
+}
+[data-mood="latenight"] {
+  --weather-bg:     #F0EDE8;
+  --weather-accent: #6B6B8B;
+  --weather-border: #D4D0DC;
+  --weather-glow:   rgba(107,107,139,0.06);
+}
+[data-mood="morning"] {
+  --weather-bg:     #F8F6EE;
+  --weather-accent: #8B8A5A;
+  --weather-border: #E0DFC8;
+  --weather-glow:   rgba(139,138,90,0.04);
+}
+[data-mood="missing"] {
+  --weather-bg:     #F4F0ED;
+  --weather-accent: #9B7B6B;
+  --weather-border: #DBD3CC;
+  --weather-glow:   rgba(155,123,107,0.05);
+}
+
+/* ─── Base Styles ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--weather-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: background-color 800ms ease-in-out;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography ────────────────────────────────────────────────── */
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.font-devanagari {
+  font-family: var(--font-devanagari), var(--font-sans), sans-serif;
+  line-height: 1.7;
+}
+
+/* ─── Focus ring ────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Selection ─────────────────────────────────────────────────── */
+::selection {
+  background-color: rgba(139, 115, 85, 0.2);
+  color: var(--color-text-primary);
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border-medium);
+  border-radius: 999px;
+}
+
+/* ─── Reduced motion ────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    transition: none !important;
+  }
+}
+
+/* ─── Utility helpers ───────────────────────────────────────────── */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Sticky header backdrop */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}

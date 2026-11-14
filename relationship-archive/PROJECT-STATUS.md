@@ -4,20 +4,56 @@
 - **Skill version:** 3.6.0
 - **Data schema version:** 1.0.0 (not yet applied — normalization not started)
 - **Parser version:** chat_tools.py v3.6.0 · media_tools.py v3.6.0
-- **Last updated:** 2026-11-13 (Asia/Kolkata)
-- **Current phase:** `ingestion/complete` — full 13-stage pipeline run, ALL PASS, waiting for user approval
+- **Last updated:** 2026-11-14 (Asia/Kolkata)
+- **Current phase:** `frontend/implementation` — scaffolding Next.js app, writing all components and pages with synthetic fixture data
 - **Last verified checkpoint ID:** CP-ING-FINAL
 - **Latest checkpoint path:** `state/checkpoints/CP-ING-FINAL.json`
+- **Frontend path:** `relationship-archive/frontend/` (Next.js 15, TypeScript, Tailwind CSS)
 
 ---
 
 ## Current position
 
 **Last fully verified operation:** Full 13-stage ingestion pipeline complete (2026-11-13). Checkpoint CP-ING-FINAL. ALL PASS.
+Design system document approved by user (2026-11-14).
 
-**Exact next action:** User reviews ingestion audit report and approves (or raises issues). After approval: resolve DEC-001 through DEC-009, then proceed to reading pass and analysis.
+**Current operation:** Frontend implementation in progress (2026-11-14).
 
-**In-progress operation:** None. Ingestion complete. Waiting for user approval.
+| Step | Status |
+|------|--------|
+| Design system document (`DESIGN-SYSTEM.md`) | ✅ Complete — user approved |
+| Next.js 15 scaffold (`frontend/`) | ✅ Complete (Next.js 16.4.6, React 19, Tailwind v4) |
+| TypeScript types (`src/lib/types.ts`) | ✅ Written |
+| Synthetic fixture data (`src/lib/fixtures.ts`) | ✅ Written — 30 msgs, 4 chapters, 6 months, 9 media, 5 insights |
+| Emotional weather system (`src/lib/emotional-weather.ts`) | ✅ Written |
+| Utility functions (`src/lib/utils.ts`) | ✅ Written |
+| Hooks (useReducedMotion, useMediaReveal, useEmotionalWeather) | ✅ Written |
+| Navigation component (mobile bottom bar + desktop sidebar) | ✅ Written |
+| Shell component (emotional weather wrapper) | ✅ Written |
+| PageHeader component (sticky, blurred) | ✅ Written |
+| ChatBubble component (all kinds, sensitive reveal, AI/human notes) | ✅ Written |
+| ChatThread component (day headers, grouping logic) | ✅ Written |
+| TimelineTrack component | ✅ Written |
+| ChapterCard component | ✅ Written |
+| MediaGrid + MediaViewer (lightbox, sensitive blur) | ✅ Written |
+| SearchBar + SearchResults components | ✅ Written |
+| InsightCard component (AI analysis) | ✅ Written |
+| globals.css (all design tokens, weather states, reduced-motion) | ✅ Written |
+| Root layout (fonts: Source Serif 4, Inter, Noto Devanagari, JetBrains Mono) | ✅ Written |
+| Home page | ✅ Written |
+| Timeline page | ✅ Written |
+| Chapters page | ✅ Written |
+| Conversation page | ✅ Written |
+| Search page | ✅ Written |
+| Memories page | ✅ Written |
+| Analysis page | ✅ Written |
+| About page | ✅ Written |
+| TypeScript check (`tsc --noEmit`) | ✅ 0 errors |
+| Production build (`npm run build`) | ✅ 0 errors — all 9 routes built as static |
+| Browser preview | 🔄 Screenshots in progress |
+| Real data integration | 🔄 In progress |
+
+**Exact next action:** Browser screenshots reviewing → user approves visual foundation → integrate real normalized data → wire real messages into ConversationPage → implement data pagination and real search indexing.
 
 ---
 
